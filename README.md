@@ -1,1 +1,1 @@
-# Django_quick_cheatsheet
+# Using Paginator in a view function
