@@ -9,7 +9,7 @@ from django.shortcuts import render
 ```python
 def name_of_view_function(request):
     model_list = Modelname.objects.all()
-    paginator = Paginator(contact_list, 10) # Show 10 model objects per page.
+    paginator = Paginator(model_list, 10) # Show 10 model objects per page.
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
