@@ -17,4 +17,4 @@ def name_of_view_function(request):
   
 ```
 In index.html 
-|dsfds|fsdfs|sfds|
+| dsfds | fsdfs | sfds |
