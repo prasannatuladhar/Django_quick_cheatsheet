@@ -16,5 +16,5 @@ def name_of_view_function(request):
     return render(request, 'index.html', {'page_obj': page_obj})
   
 ```
-In index.html 
-| dsfds | fsdfs | sfds |
+USe
+`sdas`
