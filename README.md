@@ -1,5 +1,5 @@
 # Using Paginator in a view function
 ## Quick Guide
-'''python
+```python
 print("hello")
-'''
+```
