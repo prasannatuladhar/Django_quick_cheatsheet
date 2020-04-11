@@ -16,5 +16,8 @@ def name_of_view_function(request):
     return render(request, 'index.html', {'page_obj': page_obj})
   
 ```
-USe
-`sdas`
+Remember to Use
+` {{page_obj.previous_page_number}} For Previouse Page `
+` {{page_obj.number}} For Current Page `
+` {{page_obj.next_page_number}} For Next Page `
+` {{page_obj.paginator.num_pages}} For Total Number of Page `
