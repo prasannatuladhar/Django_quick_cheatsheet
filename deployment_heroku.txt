@@ -1,21 +1,62 @@
+One Time Setup
+- Create an Heroku account
+- Install git ( check git --version)
+- install pipenv
+- Install Heroku CLI
+
+
 - Copy the project seperately
 - Go to 'Getting Started on Heroku with Python'
-- Create an Heroku account
-- install pipenv
-- Install git ( check git --version)
-- Install Heroku CLI
 - Login heroku
 - Create a virtual enviroment
 - Run manage.py not gonna run - pip freeze nothing installing
 - Check which version django,requests you have and install it
 - Run manage.py and then stop it
 - Go to django heroku
-- Create a Procfile and 
+- Create a Procfile (web: gunicorn Appname.wsgi)
+//https://devcenter.heroku.com/articles/django-app-configuration
 - Install django-heroku
 - Add stuff to settings.py file
 - Install guincorn 
-- pip freeze - requirements.txt (use the angle bracket after pip freeze. Youtube doesn't allow angle bracket in description :/ )
+- Install python-decouple
+- pip freeze > requirements.txt 
+- add .gitignore file(not mandatory)  /https://www.gitignore.io/api/django
 - heroku create attreyaweb (to create an app on heroku)
 - git status git commands - (git push heroku master
 - Open up the website)
 - Admin panel not working. heroku run bash. Migrations
+
+
+
+
+*****Some changes in Setting.py********
+#add on top
+import django_heroku
+import dj_database_url
+from decouple import config
+
+#add on middleware
+'django.middleware.security.SecurityMiddleware',
+'whitenoise.middleware.WhiteNoiseMiddleware',
+
+#add on bottom
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#add very bottom
+django_heroku.settings(locals())
+
+
+
+********Heroku Stuff************************
+heroku login
+heroku keys:add
+heroku create
+heroku open
+heroku remane WEBSITE NAME(not mandatory)
+
+
+*Handling error for complex app
+Error while running '$ python manage.py collectstatic --noinput'.
+remote:        See traceback above for details.
+
+

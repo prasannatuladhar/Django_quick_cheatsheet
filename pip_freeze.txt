@@ -1,0 +1,10 @@
+#install packages using pip according to the requirements.txt file 
+For virtualenv to install all files in the requirements.txt file.
+
+cd to the directory where requirements.txt is located
+activate your virtualenv
+run: pip install -r requirements.txt in your shell
+
+
+#install all in requirements.txt
+pip freeze > requirements.txt
