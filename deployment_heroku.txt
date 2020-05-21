@@ -21,7 +21,7 @@ One Time Setup
 - Install python-decouple
 - pip freeze > requirements.txt 
 - add .gitignore file(not mandatory)  /https://www.gitignore.io/api/django
-- heroku create attreyaweb (to create an app on heroku)
+- heroku create APPNAME (to create an app on heroku)
 - git status git commands - (git push heroku master
 - Open up the website)
 - Admin panel not working. heroku run bash. Migrations
